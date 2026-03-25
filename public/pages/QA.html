@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+        <div id="nav-placeholder"></div>
+
+    <section class="background">
+      <img src="../assets/background.png" alt="Landing" class="background-img" />
+    </section>
+    <div class="background-overlay"></div>
+    <section class="qa-content">
+      <div class="qa-container">
+        <h2 class="qa-title">Preguntas Y Respuestas</h2>
+        
+        <div class="qa-item">
+          <button class="qa-question" onclick="toggleQA(this)">¿Cómo puedo crear un tiquet de soporte?</button>
+          <div class="qa-answer">
+            <p>Dirígete a la sección "Sistema de Tiquets" en el menú de Incidencias, rellena el formulario con los detalles de tu problema y pulsa enviar.</p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question" onclick="toggleQA(this)">¿Cuál es el tiempo de respuesta estimado?</button>
+          <div class="qa-answer">
+            <p>Nuestro equipo técnico suele responder en un plazo de 24 a 48 horas laborables, dependiendo de la prioridad del tiquet.</p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question" onclick="toggleQA(this)">¿Cómo funciona la tienda de segunda mano?</button>
+          <div class="qa-answer">
+            <p>Los usuarios pueden listar sus productos usados. Nosotros actuamos como intermediarios para asegurar que el pago y la entrega se realicen de forma segura.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login/Register form section (initially hidden) -->
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="login-form" class="form-wrapper hidden">
+      <button id="close-login" class="close-btn">&times;</button>
+      <h1 class="logo">Placeholder Text</h1>
+      <p class="subtitle">Placeholder Text</p>
+
+      <input type="text" id="inputField3" placeholder="Email" />
+      <input type="text" id="inputField" placeholder="Username" />
+      <input type="password" id="inputField2" placeholder="Password" />
+
+      <button onclick="registerUser()" class="registerButton">Register</button>
+      <p id="message" class="message"></p>
+    </div>
+
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

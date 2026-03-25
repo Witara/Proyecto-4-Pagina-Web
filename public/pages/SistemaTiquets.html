@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+
+    <section class="background">
+      <img src="../assets/background.png" alt="Landing" class="background-img" />
+    </section>
+    <div class="background-overlay"></div>
+    <main class="main-content">
+      <div class="ticket-box">
+        <h2>Abrir Tiquet de Soporte</h2>
+        <p>Complete los detalles de su incidencia y nos pondremos en contacto a la brevedad.</p>
+        
+        <form id="form-tiquet">
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" placeholder="Ej: Error al procesar pago" required>
+          </div>
+
+          <div class="form-group">
+            <label for="categoria">Categoría</label>
+            <select id="categoria">
+              <option value="tecnico">Problema Técnico</option>
+              <option value="tienda">Tienda y Productos</option>
+              <option value="cuenta">Gestión de Cuenta</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="prioridad">Prioridad</label>
+            <select id="prioridad">
+              <option value="baja">Baja</option>
+              <option value="media">Media</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="descripcion">Descripción de la incidencia</label>
+            <textarea id="descripcion" rows="5" placeholder="Describa su problema con detalle..." required></textarea>
+          </div>
+
+          <button type="button" class="btn-enviar" onclick="enviarTiquet()">Generar Tiquet</button>
+        </form>
+        <div id="resultado-envio" class="hidden"></div>
+      </div>
+    </main>
+    <section class="qa-content-styled">
+      <div class="qa-container">
+        <h2 class="main-title">CENTRO DE SOPORTE: FAQ</h2>
+        <p class="subtitle">SOLUCIONES TÉCNICAS CON RIGOR Y EFICIENCIA.</p>
+
+        <div class="category-block">
+          <button class="category-trigger" onclick="toggleElement(this)">
+            <span class="category-number">01.</span> PREGUNTAS SOBRE WINDOWS
+          </button>
+          <div class="category-content">
+            
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">He olvidado la contraseña</button>
+              <div class="answer-content">
+                <p>Falla la contraseña una vez para que aparezca el botón "Restablecer contraseña". Responde las 3 preguntas de seguridad configuradas para recuperar el acceso.</p>
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">Eliminar notificaciones</button>
+              <div class="answer-content">
+                <p>Configuración > Sistema > Notificaciones. Desactiva Microsoft Store, Aplicación de inicio y Windows Defender para un entorno limpio.</p>
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">Cambiar app predeterminada PDF</button>
+              <div class="answer-content">
+                <p>Clic derecho en el archivo > "Abrir con..." > "Elegir otra aplicación". Marca la casilla "Siempre usar esta aplicación".</p>
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">Pantalla azul (BSOD)</button>
+              <div class="answer-content">
+                <p>Suele ser fallo de hardware o drivers. Verifica la temperatura de la CPU, la conexión de la RAM y actualiza controladores desde el Modo Seguro.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="category-block">
+          <button class="category-trigger" onclick="toggleElement(this)">
+            <span class="category-number">02.</span> PREGUNTAS SOBRE LINUX
+          </button>
+          <div class="category-content">
+            
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">¿Cómo actualizar el sistema?</button>
+              <div class="answer-content">
+                <p>Usa la terminal. En Debian/Ubuntu: <code>sudo apt update && sudo apt upgrade</code>. En Fedora: <code>sudo dnf upgrade</code>.</p>
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">Linux no se inicia (Modo Recovery)</button>
+              <div class="answer-content">
+                <p>Entra en GRUB (Esc), selecciona "Advanced options" > "Recovery mode". Ejecuta <strong>Clean</strong>, <strong>DPKG</strong> y <strong>FSCK</strong> para reparar archivos críticos.</p>
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">Cambiar IP y Usuarios</button>
+              <div class="answer-content">
+                <p>IP: <code>sudo ifconfig eth0 [IP] netmask [MÁSCARA]</code>. Usuarios: <code>sudo adduser [nombre]</code> desde una cuenta con permisos root.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="category-block">
+          <button class="category-trigger" onclick="toggleElement(this)">
+            <span class="category-number">03.</span> APLICACIONES DE OFIMÁTICA
+          </button>
+          <div class="category-content">
+            
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">Índices y conversión PDF</button>
+              <div class="answer-content">
+                <p>Índice: Usa estilos "Título 1" y luego Tabla de contenido en Referencias. PDF: Archivo > Guardar como > Tipo: PDF. Word abre PDFs y los convierte a texto editable automáticamente.</p>
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <button class="question-trigger" onclick="toggleElement(this)">Excel: Errores y Seguridad</button>
+              <div class="answer-content">
+                <p>Para errores #DIV/0!: <code>=SI.ERROR(operación; 0)</code>. Para contraseñas: Archivo > Información > Proteger libro > Cifrar con contraseña.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Login/Register form section (initially hidden) -->
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="login-form" class="form-wrapper hidden">
+      <button id="close-login" class="close-btn">&times;</button>
+      <h1 class="logo">Placeholder Text</h1>
+      <p class="subtitle">Placeholder Text</p>
+
+      <input type="text" id="inputField3" placeholder="Email" />
+      <input type="text" id="inputField" placeholder="Username" />
+      <input type="password" id="inputField2" placeholder="Password" />
+
+      <button onclick="registerUser()" class="registerButton">Register</button>
+      <p id="message" class="message"></p>
+    </div>
+
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

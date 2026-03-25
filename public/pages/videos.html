@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Main</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+
+    <section class="background">
+      <img src="../assets/background.png" alt="Landing" class="background-img" />
+    </section>
+    <div class="background-overlay"></div>
+    <div id="objectsContainer">
+    <section class="devlogs-section">
+      <h1 class="devlogs-title">Video Tutoriales</h1>
+        <div class="sort-controls">
+        <label for="sortSelect">Categoria:</label>
+        <select id="sortSelect" onchange="filterDevlogs()">
+            <option value="all" selected>To  dos los videos</option>
+            <option value="network">Redes</option>
+            <option value="pc">PC & Componentes</option>
+            <option value="microsoft">Aplicaciones Ofimaticas</option>
+        </select>
+        </div>
+      <div class="devlogs-grid">
+        <div class="devlog-card" id="10" data-category="network">
+          <p class="woy">Fabian Parada Pinto</p>
+          <a href="https://grupstucom-my.sharepoint.com/personal/pl2025559_365_stucom_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fpl2025559%5F365%5Fstucom%5Fcom%2FDocuments%2FProyecto%204%2FVideos%2FListo%20Para%20la%20Memoria%2Ffavyan%5Fvid2%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ed148cf90%2Dc352%2D47d2%2D9d76%2D08e09f36f3ea" target="_blank">
+            <img src="../assets/papisexy.jpg" alt="Devlog Thumbnail">
+          </a>
+          <h2 class="video-title">Que hacer si el WIFI del PC no funciona</h2>
+        </div>
+        <div class="devlog-card" id="9" data-category="network">
+          <p class="woy">Fabian Parada Pinto</p>
+          <a href="https://grupstucom-my.sharepoint.com/personal/pl2025559_365_stucom_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fpl2025559%5F365%5Fstucom%5Fcom%2FDocuments%2FProyecto%204%2FVideos%2FListo%20Para%20la%20Memoria%2FFavyan%5Fvid%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E10f0a5e0%2D74f4%2D4698%2Db776%2D8c054bf45798"_blank">
+            <img src="../assets/papisexy.jpg" alt="Devlog Thumbnail">
+          </a>
+          <h2 class="video-title">Como acceder a una pagina web si no nos deja con su nombre</h2>
+        </div>
+        <div class="devlog-card" id="8" data-category="pc">
+          <p class="woy">Pablo Pizarro Tamargo</p>
+          <a href="https://grupstucom-my.sharepoint.com/:v:/g/personal/pl2025559_365_stucom_com/IQBi_CeEH9SJRILiPBUwZJmyAQiGDUtrqrmdbgNkxzmK1Ew?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=gem6Nq" target="_blank">
+            <img src="../assets/papisexy.jpg" alt="Devlog Thumbnail">
+          </a>
+          <h2 class="video-title">Como quitar modo escritura a un pendrive</h2>
+        </div>
+        <div class="devlog-card" id="7" data-category="pc">
+          <p class="woy">Pablo Pizarro Tamargo</p>
+          <a href="https://grupstucom-my.sharepoint.com/:v:/g/personal/pl2025559_365_stucom_com/IQBi_CeEH9SJRILiPBUwZJmyAQiGDUtrqrmdbgNkxzmK1Ew?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=gem6Nq" target="_blank">
+            <img src="../assets/papisexy.jpg" alt="Devlog Thumbnail">
+          </a>
+          <h2 class="video-title">Como reparar un PC que hace mucho ruido</h2>
+        </div>
+        <div class="devlog-card" id="6" data-category="microsoft">
+          <p class="woy">Renas Kayahan</p>
+          <a href="https://grupstucom-my.sharepoint.com/:v:/g/personal/pl2025559_365_stucom_com/IQAqQgtA5fETSpP19iBb7DDfAVbR_fWJqPCRjJ3XiUoPphU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=L0O0Hg" target="_blank">
+            <img src="../assets/papisexy.jpg" alt="Devlog Thumbnail">
+          </a>
+          <h2 class="video-title">Como convertir un archivo Word en un archivo PDF</h2>
+        </div>
+        <div class="devlog-card" id="5" data-category="microsoft">
+          <p class="woy">Renas Kayahan</p>
+          <a href="https://grupstucom-my.sharepoint.com/:v:/g/personal/pl2025559_365_stucom_com/IQDuT2mIpEgjTqQeM8v94q8UAUWU82eOGtZbI8Ns2PtQVSA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5h8Wcu" target="_blank">
+            <img src="../assets/papisexy.jpg" alt="Devlog Thumbnail">
+          </a>
+          <h2 class="video-title">Como insertar un auido a powerpoint</h2>
+        </div>
+        <div class="devlog-card" id="4" data-category="pc">
+          <p class="woy">Renas Kayahan</p>
+          <a href="https://grupstucom-my.sharepoint.com/:v:/g/personal/pl2025559_365_stucom_com/IQAeT0BC_NyKRJ-W43Y804nYATJb4vR3KRm88da2kYVXqkg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=bamMfE" target="_blank">
+            <img src="../assets/papisexy.jpg" alt="Devlog Thumbnail">
+          </a>
+          <h2 class="video-title">Que hacer si el PC no detecta el disco duro</h2>
+        </div>
+        </div>
+      </section>
+      </div>
+
+    <!-- Login/Register form section (initially hidden) -->
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="login-form" class="form-wrapper hidden">
+      <button id="close-login" class="close-btn">&times;</button>
+      <h1 class="logo">Placeholder Text</h1>
+      <p class="subtitle">Placeholder Text</p>
+
+      <input type="text" id="inputField3" placeholder="Email" />
+      <input type="text" id="inputField" placeholder="Username" />
+      <input type="password" id="inputField2" placeholder="Password" />
+
+      <button onclick="registerUser()" class="registerButton">Register</button>
+      <p id="message" class="message"></p>
+    </div>
+
+  </div>
+<script>
+    function filterDevlogs() {
+    const selectedCategory = document.getElementById("sortSelect").value;
+    const cards = document.querySelectorAll(".devlog-card");
+
+    cards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+        
+        if (selectedCategory === "all" || cardCategory === selectedCategory) {
+        card.style.display = "block"; 
+        } else {
+        card.style.display = "none";
+        }
+    });
+    }
+  function scalePage() {
+    if (window.innerWidth >= 1920) return;
+    const wrapper = document.getElementById('objectsContainer');
+    const devlogSection = document.querySelector('.devlogs-section');
+
+    if (window.innerWidth <= 600) {
+      // Reset scale & spacing on small screens
+      wrapper.style.transform = 'scale(1)';
+      wrapper.style.transformOrigin = 'top left';
+      document.body.style.height = 'auto';
+      devlogSection.style.paddingTop = '100px';
+      devlogSection.style.marginBottom = '0px';
+      return;
+    }
+
+    const baseWidth = 1920;
+    const currentWidth = window.innerWidth;
+    const scale = Math.min(1, currentWidth / baseWidth);
+
+    // Apply scale with transform origin left top
+    wrapper.style.transformOrigin = 'top left';
+    wrapper.style.transform = `scale(${scale})`;
+
+    // wrapper.style.margin = '0 auto';
+
+    const scaledHeight = wrapper.offsetHeight * scale;
+    document.body.style.height = `${scaledHeight}px`;
+
+    const basePadding = 100;
+    const scaledPadding = basePadding / scale;
+    devlogSection.style.paddingTop = `${scaledPadding}px`;
+
+    const pullUp = (1 - scale) * 1624; 
+    devlogSection.style.marginBottom = `-${pullUp}px`;
+  }
+
+  window.addEventListener('load', scalePage);
+  window.addEventListener('resize', scalePage);
+
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>

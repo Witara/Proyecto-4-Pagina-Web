@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contactanos</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+       <div id="nav-placeholder"></div>
+
+    <section class="background">
+      <img src="../assets/background.png" alt="Landing" class="background-img" />
+    </section>
+    <div class="background-overlay"></div>
+    <main class="contact-container">
+      <section class="contact-form-section">
+        <h2>Envíanos un mensaje</h2>
+        <form action="#" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Nombre</label>
+            <input type="text" id="contact-name" name="name" placeholder="Tu nombre" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-email">Correo Electrónico</label>
+            <input type="email" id="contact-email" name="email" placeholder="Tu correo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Asunto</label>
+            <input type="text" id="contact-subject" name="subject" placeholder="Asunto del mensaje" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Mensaje</label>
+            <textarea id="contact-message" name="message" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+
+          <button type="submit" class="contact-submit-btn">Enviar</button>
+        </form>
+      </section>
+
+      <aside class="contact-info-section">
+        <h3>Información de Contacto</h3>
+        <ul class="contact-details">
+          <li><strong>Email:</strong> soporte@thelastprey.com</li>
+          <li><strong>Teléfono:</strong> +34 900 000 000</li>
+          <li><strong>Ubicación:</strong> Barcelona, España</li>
+          <li><strong>Horario:</strong> Lunes a Viernes, 09:00 - 18:00 CET</li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- Login/Register form section (initially hidden) -->
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="login-form" class="form-wrapper hidden">
+      <button id="close-login" class="close-btn">&times;</button>
+      <h1 class="logo">Placeholder Text</h1>
+      <p class="subtitle">Placeholder Text</p>
+
+      <input type="text" id="inputField3" placeholder="Email" />
+      <input type="text" id="inputField" placeholder="Username" />
+      <input type="password" id="inputField2" placeholder="Password" />
+
+      <button onclick="registerUser()" class="registerButton">Register</button>
+      <p id="message" class="message"></p>
+    </div>
+
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

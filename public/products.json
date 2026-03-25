@@ -1,0 +1,92 @@
+[
+  {
+    "nombre": "Corsair 3500X Semi Torre Cristal Templado",
+    "precio": "99.90€",
+    "estado": "Nuevo",
+    "imagen": "../assets/corsair_3500x.png"
+  },
+  {
+    "nombre": "Corsair 4000D Semi Torre E-ATX Blanca",
+    "precio": "97.41€",
+    "estado": "Nuevo",
+    "imagen": "../assets/corsair_4000d.png"
+  },
+  {
+    "nombre": "ASUS A31 PLUS ARGB Mid Tower ATX",
+    "precio": "108.95€",
+    "estado": "Nuevo",
+    "imagen": "../assets/asus_a31.png"
+  },
+  {
+    "nombre": "AMD Ryzen 7 5800X 3.8GHz",
+    "precio": "188.95€",
+    "estado": "Muy bueno",
+    "imagen": "../assets/ryzen7_5800x.png"
+  },
+  {
+    "nombre": "Intel Core i7-12700 2.1 GHz",
+    "precio": "332.00€",
+    "estado": "Muy bueno",
+    "imagen": "../assets/i7_12700.png"
+  },
+  {
+    "nombre": "AMD Ryzen 9 9950X3D 4.3/5.7GHz",
+    "precio": "332.00€",
+    "estado": "Nuevo",
+    "imagen": "../assets/ryzen9_9950x.png"
+  },
+  {
+    "nombre": "Corsair CX650 650 W 80 Plus Bronze",
+    "precio": "58.98€",
+    "estado": "Nuevo",
+    "imagen": "../assets/cx650.png"
+  },
+  {
+    "nombre": "Corsair RM850e 850W 80 Plus Gold",
+    "precio": "119.90€",
+    "estado": "Nuevo",
+    "imagen": "../assets/rm850e.png"
+  },
+  {
+    "nombre": "Corsair RM1000x 1000W 80 Plus Gold",
+    "precio": "187.61€",
+    "estado": "Nuevo",
+    "imagen": "../assets/rm1000x.png"
+  },
+  {
+    "nombre": "Kingston FURY Beast DDR4 16GB (2x8GB)",
+    "precio": "169.95€",
+    "estado": "Muy bueno",
+    "imagen": "../assets/kingston_fury.png"
+  },
+  {
+    "nombre": "Forgeon Cyclone PLUS V2 DDR4 32GB",
+    "precio": "259.95€",
+    "estado": "Nuevo",
+    "imagen": "../assets/forgeon_cyclone.png"
+  },
+  {
+    "nombre": "Forgeon Nimbus PLUS SSD 2TB NVMe",
+    "precio": "259.95€",
+    "estado": "Nuevo",
+    "imagen": "../assets/nimbus_2tb.png"
+  },
+  {
+    "nombre": "Samsung 990 PRO 4TB SSD NVMe",
+    "precio": "494.99€",
+    "estado": "Nuevo",
+    "imagen": "../assets/samsung_990pro.png"
+  },
+  {
+    "nombre": "Logitech G502 Hero",
+    "precio": "81.00€",
+    "estado": "Nuevo",
+    "imagen": "../assets/g502_hero.png"
+  },
+  {
+    "nombre": "Monitor Krom Kertz 24\" 120Hz",
+    "precio": "80.00€",
+    "estado": "Nuevo",
+    "imagen": "../assets/krom_kertz.png"
+  }
+]

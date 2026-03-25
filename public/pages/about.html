@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+
+    <section class="background">
+      <img src="../assets/background.png" alt="Landing" class="background-img" />
+    </section>
+    <div class="background-overlay"></div> 
+    <main class="about-container">
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Nuestra Misión</h1>
+          <p>Transformamos el mercado de segunda mano con rigor técnico y seguridad total.</p>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="info-card">
+          <h3>¿Quiénes somos?</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam culpa dolore nobis accusantium dolorem hic voluptas impedit dolor enim dolores mollitia magni distinctio dicta eos voluptates veritatis, velit totam doloribus!.</p>
+        </div>
+        
+        <div class="info-card">
+          <h3>Nuestro Enfoque</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ratione earum tempore architecto consequatur quidem laudantium atque unde, pariatur facere alias. Dicta dolore, eos laborum sed asperiores omnis soluta nobis?</p>
+        </div>
+      </section>
+
+      <section class="values-section">
+        <h2>Valores Clave</h2>
+        <div class="values-list">
+          <div class="value-item"><strong>01. Integridad</strong> – Procesos claros y trazables.</div>
+          <div class="value-item"><strong>02. Sostenibilidad</strong> – Maximizamos el ciclo de vida del hardware.</div>
+          <div class="value-item"><strong>03. Soporte</strong> – Resolución directa a través de nuestro sistema de tickets.</div>
+        </div>
+      </section>
+    </main>
+    <!-- Login/Register form section (initially hidden) -->
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="login-form" class="form-wrapper hidden">
+      <button id="close-login" class="close-btn">&times;</button>
+      <h1 class="logo">Placeholder Text</h1>
+      <p class="subtitle">Placeholder Text</p>
+
+      <input type="text" id="inputField3" placeholder="Email" />
+      <input type="text" id="inputField" placeholder="Username" />
+      <input type="password" id="inputField2" placeholder="Password" />
+
+      <button onclick="registerUser()" class="registerButton">Register</button>
+      <p id="message" class="message"></p>
+    </div>
+
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
