@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="../style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
-  /* Tus estilos se mantienen igual */
-  .tabla-moderna {
+  /* Estilos para la tabla */
+.tabla-moderna {
       width: 90%;
       margin: 20px auto; 
       border-collapse: collapse;
@@ -56,14 +56,27 @@
 <body>
   <div class="container">
     <div id="nav-placeholder"></div>
+
     <section class="background">
       <img src="../assets/background.png" alt="Landing" class="background-img" />
     </section>
     <div class="background-overlay"></div>
     
     <div id="overlay" class="overlay hidden"></div>
+    <div id="login-form" class="form-wrapper hidden">
+      <button id="close-login" class="close-btn">&times;</button>
+      <h1 class="logo">Placeholder Text</h1>
+      <p class="subtitle">Placeholder Text</p>
 
-    <?php 
+      <input type="text" id="inputField3" placeholder="Email" />
+      <input type="text" id="inputField" placeholder="Username" />
+      <input type="password" id="inputField2" placeholder="Password" />
+
+      <button onclick="registerUser()" class="registerButton">Register</button>
+      <p id="message" class="message"></p>
+    </div>
+        <h2>Datos de Empleados</h2>
+          <?php 
       $tabla_seleccionada = isset($_GET['categoria']) ? $_GET['categoria'] : 'empleados';
       echo "<h2>Datos de: " . ucfirst($tabla_seleccionada) . "</h2>";
     ?>
@@ -72,7 +85,8 @@
         <form method="GET" action="">
             <select name="categoria" class="select-css" onchange="this.form.submit()">
                 <option value="empleados" <?php if($tabla_seleccionada == 'empleados') echo 'selected'; ?>>Empleados</option>
-                <option value="departamentos" <?php if($tabla_seleccionada == 'departamentos') echo 'selected'; ?>>Departamentos</option>
+                <option value="empleados.bcn" <?php if($tabla_seleccionada == 'empleados.bcn') echo 'selected'; ?>>Empleados de Barcelona</option>
+                <option value="empleados.ordenados" <?php if($tabla_seleccionada == 'empleados.ordenados') echo 'selected'; ?>>Empleados (Por Apellido)</option>                <option value="departamentos" <?php if($tabla_seleccionada == 'departamentos') echo 'selected'; ?>>Departamentos</option>
                 <option value="proyectos" <?php if($tabla_seleccionada == 'proyectos') echo 'selected'; ?>>Proyectos</option>
                 <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas</option>
             </select>
@@ -85,8 +99,16 @@
     require_once 'db.php'; 
 
     try {
-        // Consultamos la tabla elegida
-        $consulta = $conexion->query("SELECT * FROM $tabla_seleccionada"); 
+        if ($tabla_seleccionada == 'empleados.bcn') {
+            $consulta = $conexion->query("SELECT * FROM empleados WHERE lugar_nac = 'Barcelona'"); 
+
+        }  else if ($tabla_seleccionada == 'empleados.ordenados') {
+          $consulta = $conexion->query("SELECT * FROM empleados ORDER BY ape1 ASC");
+
+        } else {
+          $consulta = $conexion->query("SELECT * FROM $tabla_seleccionada");
+          
+        }
         
         if ($consulta->num_rows > 0) {
             echo '<table class="tabla-moderna"><thead><tr>';
