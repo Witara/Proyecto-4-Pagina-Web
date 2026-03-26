@@ -30,15 +30,17 @@
       <p id="message" class="message"></p>
     </div>
         <h2>Datos de Empleados</h2>
-        
-        <?php  
-        // Conectar a la base de datos
-        // Nota: Asegúrate de que la contraseña 'stucom' sea la correcta para tu XAMPP local
-        $conexion = new mysqli('localhost', 'root', 'stucom', 'oficina') or die ("No se puede conectar"); 
-        
-        $consulta = $conexion->query("SELECT * FROM empleados"); 
-        ?> 
+          <?php  
+          // Importar la conexión centralizada
+          require_once 'db.php'; 
 
+          // Ejecutar consulta
+          try {
+              $consulta = $conexion->query("SELECT * FROM empleados"); 
+          } catch (mysqli_sql_exception $e) {
+              die("Error en la consulta: " . $e->getMessage());
+          }
+          ?>
         <table border="1"> 
             <tr>
                 <th>NUSS</th>
