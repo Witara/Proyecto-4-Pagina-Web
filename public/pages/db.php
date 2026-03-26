@@ -2,7 +2,7 @@
 // Configuración de parámetros
 define('DB_HOST', '127.0.0.1'); // Usa IP para evitar latencia de resolución de nombre
 define('DB_USER', 'root');      // Usuario de MySQL Workbench
-define('DB_PASS', 'stucom');    // Tu contraseña de MySQL
+define('DB_PASS', '');    // Tu contraseña de MySQL
 define('DB_NAME', 'oficina');   // Nombre de la base de datos
 define('DB_PORT', 3306);        // Puerto por defecto
 
