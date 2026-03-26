@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Main - Conexión a BD</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+
+    <section class="background">
+      <img src="../assets/background.png" alt="Landing" class="background-img" />
+    </section>
+    <div class="background-overlay"></div>
+    
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="login-form" class="form-wrapper hidden">
+      <button id="close-login" class="close-btn">&times;</button>
+      <h1 class="logo">Placeholder Text</h1>
+      <p class="subtitle">Placeholder Text</p>
+
+      <input type="text" id="inputField3" placeholder="Email" />
+      <input type="text" id="inputField" placeholder="Username" />
+      <input type="password" id="inputField2" placeholder="Password" />
+
+      <button onclick="registerUser()" class="registerButton">Register</button>
+      <p id="message" class="message"></p>
+    </div>
+        <h2>Datos de Empleados</h2>
+        
+        <?php  
+        // Conectar a la base de datos
+        // Nota: Asegúrate de que la contraseña 'stucom' sea la correcta para tu XAMPP local
+        $conexion = new mysqli('localhost', 'root', 'stucom', 'oficina') or die ("No se puede conectar"); 
+        
+        $consulta = $conexion->query("SELECT * FROM empleados"); 
+        ?> 
+
+        <table border="1"> 
+            <tr>
+                <th>NUSS</th>
+                <th>nombre</th>
+                <th>ape1</th>
+                <th>ape2</th>
+                <th>DNI</th>
+                <th>telefono</th>
+                <th>fecha_de_contrato</th>
+                <th>lugar_nac</th>
+                <th>ID_departamento</th>
+                <th>Nom_proyecto</th>
+            </tr> 
+            
+            <?php 
+            // Bucle while para pasar por las filas
+            while($registro = $consulta->fetch_object()) { 
+                echo '<tr>';
+                echo '<td>' . $registro->NUSS . '</td>'; 
+                echo '<td>' . $registro->nombre . '</td>';
+                echo '<td>' . $registro->ape1 . '</td>'; 
+                echo '<td>' . $registro->ape2 . '</td>';
+                echo '<td>' . $registro->DNI . '</td>';
+                echo '<td>' . $registro->telefono . '</td>';
+                echo '<td>' . $registro->fecha_de_contrato . '</td>';
+                echo '<td>' . $registro->ID_departamento . '</td>';
+                echo '<td>' . $registro->Nom_proyecto . '</td>';
+                echo '</tr>'; 
+            }
+            ?> 
+        </table> 
+
+        <?php
+        $conexion->close(); // Cierro la conexión
+        ?>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
