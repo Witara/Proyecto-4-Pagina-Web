@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = ""; // Por defecto en XAMPP está vacío
-$db   = "nombre_de_tu_base_de_datos";
+$db   = "oficina";
 
 $conexion = mysqli_connect($host, $user, $pass, $db);
 
