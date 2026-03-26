@@ -31,47 +31,53 @@
     </div>
         <h2>Datos de Empleados</h2>
           <?php  
-          // Importar la conexión centralizada
+          // 1. Configuración de errores (Corregido con ;)
+          ini_set('display_errors', 1);
+          error_reporting(E_ALL);
+
+          // 2. Importar conexión
           require_once 'db.php'; 
 
-          // Ejecutar consulta
+          // 3. Ejecutar consulta
           try {
               $consulta = $conexion->query("SELECT * FROM empleados"); 
           } catch (mysqli_sql_exception $e) {
               die("Error en la consulta: " . $e->getMessage());
           }
           ?>
-        <table border="1"> 
-            <tr>
-                <th>NUSS</th>
-                <th>nombre</th>
-                <th>ape1</th>
-                <th>ape2</th>
-                <th>DNI</th>
-                <th>telefono</th>
-                <th>fecha_de_contrato</th>
-                <th>lugar_nac</th>
-                <th>ID_departamento</th>
-                <th>Nom_proyecto</th>
-            </tr> 
-            
-            <?php 
-            // Bucle while para pasar por las filas
-            while($registro = $consulta->fetch_object()) { 
-                echo '<tr>';
-                echo '<td>' . $registro->NUSS . '</td>'; 
-                echo '<td>' . $registro->nombre . '</td>';
-                echo '<td>' . $registro->ape1 . '</td>'; 
-                echo '<td>' . $registro->ape2 . '</td>';
-                echo '<td>' . $registro->DNI . '</td>';
-                echo '<td>' . $registro->telefono . '</td>';
-                echo '<td>' . $registro->fecha_de_contrato . '</td>';
-                echo '<td>' . $registro->ID_departamento . '</td>';
-                echo '<td>' . $registro->Nom_proyecto . '</td>';
-                echo '</tr>'; 
-            }
-            ?> 
-        </table> 
+
+          <table border="1"> 
+              <tr>
+                  <th>NUSS</th>
+                  <th>nombre</th>
+                  <th>ape1</th>
+                  <th>ape2</th>
+                  <th>DNI</th>
+                  <th>telefono</th>
+                  <th>fecha_de_contrato</th>
+                  <th>lugar_nac</th>
+                  <th>ID_departamento</th>
+                  <th>Nom_proyecto</th>
+              </tr> 
+              
+              <?php 
+              // Bucle para mostrar datos
+              while($registro = $consulta->fetch_object()) { 
+                  echo '<tr>';
+                  echo '<td>' . $registro->NUSS . '</td>'; 
+                  echo '<td>' . $registro->nombre . '</td>';
+                  echo '<td>' . $registro->ape1 . '</td>'; 
+                  echo '<td>' . $registro->ape2 . '</td>';
+                  echo '<td>' . $registro->DNI . '</td>';
+                  echo '<td>' . $registro->telefono . '</td>';
+                  echo '<td>' . $registro->fecha_de_contrato . '</td>';
+                  echo '<td>' . $registro->lugar_nac . '</td>'; // <-- Faltaba esta línea
+                  echo '<td>' . $registro->ID_departamento . '</td>';
+                  echo '<td>' . $registro->Nom_proyecto . '</td>';
+                  echo '</tr>'; 
+              }
+              ?> 
+          </table>
 
         <?php
         $conexion->close(); // Cierro la conexión
