@@ -63,7 +63,27 @@
       <button onclick="registerUser()" class="registerButton">Register</button>
       <p id="message" class="message"></p>
     </div>
-
+    <div id="product-overlay" class="product-detail-overlay hidden">
+        <div class="product-detail-content">
+            <button id="close-detail" class="close-btn">&times;</button>
+            <div class="detail-grid">
+                <div class="detail-image">
+                    <img id="detail-img" src="" alt="">
+                </div>
+                <div class="detail-info">
+                    <h1 id="detail-title"></h1>
+                    <p class="detail-status">Estado: <span id="detail-status-val"></span></p>
+                    <p class="detail-description" id="detail-desc">
+                        Este producto ha sido verificado por nuestros expertos para garantizar su calidad y funcionamiento óptimo.
+                    </p>
+                    <div class="detail-footer">
+                        <span class="detail-price" id="detail-price"></span>
+                        <button class="buy-btn large">Añadir a la cesta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 
   <script src="../script.js"></script>
