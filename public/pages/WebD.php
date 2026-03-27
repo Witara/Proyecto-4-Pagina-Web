@@ -76,7 +76,7 @@
       <p id="message" class="message"></p>
     </div>
         <h2>Datos de Empleados</h2>
-          <?php 
+    <?php 
       $tabla_seleccionada = isset($_GET['categoria']) ? $_GET['categoria'] : 'empleados';
       echo "<h2>Datos de: " . ucfirst($tabla_seleccionada) . "</h2>";
     ?>
@@ -89,6 +89,10 @@
                 <option value="empleados.ordenados" <?php if($tabla_seleccionada == 'empleados.ordenados') echo 'selected'; ?>>Empleados (Por Apellido)</option>                <option value="departamentos" <?php if($tabla_seleccionada == 'departamentos') echo 'selected'; ?>>Departamentos</option>
                 <option value="proyectos" <?php if($tabla_seleccionada == 'proyectos') echo 'selected'; ?>>Proyectos</option>
                 <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas</option>
+                <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas (General)</option>
+                <option value="nominas.febrero" <?php if($tabla_seleccionada == 'nominas.febrero') echo 'selected'; ?>>Nóminas: Febrero 2024</option>
+                <option value="nominas.extras" <?php if($tabla_seleccionada == 'nominas.extras') echo 'selected'; ?>>Nóminas: Con Horas Extra</option>
+                <option value="nominas.ordenadas" <?php if($tabla_seleccionada == 'nominas.ordenadas') echo 'selected'; ?>>Nóminas: Por Salario Bruto (Desc)</option>
             </select>
         </form>
     </div>
@@ -102,12 +106,21 @@
         if ($tabla_seleccionada == 'empleados.bcn') {
             $consulta = $conexion->query("SELECT * FROM empleados WHERE lugar_nac = 'Barcelona'"); 
 
-        }  else if ($tabla_seleccionada == 'empleados.ordenados') {
-          $consulta = $conexion->query("SELECT * FROM empleados ORDER BY ape1 ASC");
+        } else if ($tabla_seleccionada == 'empleados.ordenados') {
+            $consulta = $conexion->query("SELECT * FROM empleados ORDER BY ape1 ASC");
+
+        } else if ($tabla_seleccionada == 'nominas.febrero') {
+            $consulta = $conexion->query("SELECT * FROM nominas WHERE FECHA = '2024-02-29'");
+
+        } else if ($tabla_seleccionada == 'nominas.extras') {
+            $consulta = $conexion->query("SELECT * FROM nominas WHERE HORAS_EXTRA > 0");
+
+        } else if ($tabla_seleccionada == 'nominas.ordenadas') {
+            $consulta = $conexion->query("SELECT * FROM nominas ORDER BY SALARIO_BRUTO DESC");
 
         } else {
-          $consulta = $conexion->query("SELECT * FROM $tabla_seleccionada");
-          
+            // Ejecución por defecto para tablas base sin subcategorías
+            $consulta = $conexion->query("SELECT * FROM $tabla_seleccionada");
         }
         
         if ($consulta->num_rows > 0) {
