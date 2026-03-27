@@ -65,7 +65,26 @@
     </div>
 
   </div>
-
+  <div id="product-modal" class="product-overlay hidden">
+    <div class="product-modal-content">
+      <button id="close-product" class="close-modal-btn">&times;</button>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img id="modal-img" src="" alt="Producto">
+        </div>
+        <div class="modal-info">
+          <h2 id="modal-title">Nombre del Producto</h2>
+          <p class="modal-price" id="modal-price">0.00€</p>
+          <p class="modal-status" id="modal-status">Estado: Nuevo</p>
+          <hr>
+          <p class="modal-description" id="modal-description">
+            Descripción detallada aquí...
+          </p>
+          <button class="buy-btn">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="../script.js"></script>
 </body>
 </html>

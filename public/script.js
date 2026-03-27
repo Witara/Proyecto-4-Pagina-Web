@@ -366,3 +366,48 @@ statusFilters.forEach(cb => cb.addEventListener('change', applyFilters));
 
 // Carga inicial
 renderProducts(productos);
+
+// Selección de elementos
+const productModal = document.getElementById('product-modal');
+const closeProductBtn = document.getElementById('close-product');
+
+// Función para abrir el modal con datos dinámicos
+function openProductDetail(data) {
+    document.getElementById('modal-img').src = data.image;
+    document.getElementById('modal-title').innerText = data.title;
+    document.getElementById('modal-price').innerText = data.price;
+    document.getElementById('modal-status').innerText = `Estado: ${data.status}`;
+    document.getElementById('modal-description').innerText = data.description;
+
+    productModal.classList.add('active');
+    productModal.classList.remove('hidden');
+}
+
+// Cerrar modal
+const closeModal = () => {
+    productModal.classList.remove('active');
+    setTimeout(() => productModal.classList.add('hidden'), 400);
+};
+
+closeProductBtn.addEventListener('click', closeModal);
+
+// Cerrar al hacer clic fuera del contenido
+productModal.addEventListener('click', (e) => {
+    if (e.target === productModal) closeModal();
+});
+
+// EVENT DELEGATION: Escucha clics en productos (incluso si se cargan dinámicamente)
+document.querySelector('.products-grid').addEventListener('click', (e) => {
+    const card = e.target.closest('.product-card');
+    if (card) {
+        // Extraemos la info de los atributos data- del HTML
+        const productData = {
+            title: card.querySelector('h3').innerText,
+            price: card.querySelector('.price').innerText,
+            image: card.querySelector('img').src,
+            status: card.dataset.status || 'No especificado',
+            description: card.dataset.description || 'Sin descripción disponible.'
+        };
+        openProductDetail(productData);
+    }
+});
