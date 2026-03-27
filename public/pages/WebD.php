@@ -91,7 +91,7 @@
                 <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas</option>
                 <option value="nominas.total" <?php if($tabla_seleccionada == 'nominas.total') echo 'selected'; ?>>Nóminas: Total Pagado</option>
                 <option value="nominas.IRPF" <?php if($tabla_seleccionada == 'nominas.IRPF') echo 'selected'; ?>>IRPF Ultimo Mes</option>
-                <option value="nominas.SS" <?php if($tabla_seleccionada == 'nominas.SS') echo 'selected'; ?>>SS Pagado Est  e Año</option>
+                <option value="nominas.SS" <?php if($tabla_seleccionada == 'nominas.SS') echo 'selected'; ?>>SS Pagado Este Año</option>
             </select>
         </form>
     </div>
