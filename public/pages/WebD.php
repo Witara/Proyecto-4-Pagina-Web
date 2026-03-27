@@ -89,9 +89,9 @@
                 <option value="empleados.ordenados" <?php if($tabla_seleccionada == 'empleados.ordenados') echo 'selected'; ?>>Empleados (Por Apellido)</option>                <option value="departamentos" <?php if($tabla_seleccionada == 'departamentos') echo 'selected'; ?>>Departamentos</option>
                 <option value="proyectos" <?php if($tabla_seleccionada == 'proyectos') echo 'selected'; ?>>Proyectos</option>
                 <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas</option>
-                <option value="nominas.febrero" <?php if($tabla_seleccionada == 'nominas.febrero') echo 'selected'; ?>>Nóminas: Febrero 2024</option>
-                <option value="nominas.extras" <?php if($tabla_seleccionada == 'nominas.extras') echo 'selected'; ?>>Nóminas: Con Horas Extra</option>
-                <option value="nominas.ordenadas" <?php if($tabla_seleccionada == 'nominas.ordenadas') echo 'selected'; ?>>Nóminas: Por Salario Bruto (Desc)</option>
+                <option value="nominas.total" <?php if($tabla_seleccionada == 'nominas.total') echo 'selected'; ?>>Nóminas: Total Pagado</option>
+                <option value="nominas.IRPF" <?php if($tabla_seleccionada == 'nominas.IRPF') echo 'selected'; ?>>IRPF Ultimo Mes</option>
+                <option value="nominas.SS" <?php if($tabla_seleccionada == 'nominas.SS') echo 'selected'; ?>>SS Pagado Est  e Año</option>
             </select>
         </form>
     </div>
@@ -108,14 +108,14 @@
         } else if ($tabla_seleccionada == 'empleados.ordenados') {
             $consulta = $conexion->query("SELECT * FROM empleados ORDER BY ape1 ASC");
 
-        } else if ($tabla_seleccionada == 'nominas.febrero') {
-            $consulta = $conexion->query("SELECT * FROM nominas WHERE FECHA = '2024-02-29'");
+        } else if ($tabla_seleccionada == 'nominas.total') {
+            $consulta = $conexion->query("SELECT COALESCE(SUM(Salario_neto), 0) AS Total_Pagado_Historico FROM nominas");
 
-        } else if ($tabla_seleccionada == 'nominas.extras') {
-            $consulta = $conexion->query("SELECT * FROM nominas WHERE HORAS_EXTRA > 0");
+        } else if ($tabla_seleccionada == 'nominas.IRPF') {
+            $consulta = $conexion->query("SELECT SUM(IRPF) AS Total_IRPF_Ultimo_Mes_Registrado FROM nominas WHERE DATE_FORMAT(fecha, '%Y-%m') = (SELECT MAX(DATE_FORMAT(fecha, '%Y-%m')) FROM nominas)");
 
-        } else if ($tabla_seleccionada == 'nominas.ordenadas') {
-            $consulta = $conexion->query("SELECT * FROM nominas ORDER BY SALARIO_BRUTO DESC");
+        } else if ($tabla_seleccionada == 'nominas.SS') {
+            $consulta = $conexion->query("SELECT SUM(deducciones_SS + Aportaciones_SS) AS Total_SS_2024 FROM nominas WHERE YEAR(fecha) = 2024");
 
         } else {
             // Ejecución por defecto para tablas base sin subcategorías
