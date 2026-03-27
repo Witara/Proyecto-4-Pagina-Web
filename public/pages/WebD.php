@@ -89,7 +89,6 @@
                 <option value="empleados.ordenados" <?php if($tabla_seleccionada == 'empleados.ordenados') echo 'selected'; ?>>Empleados (Por Apellido)</option>                <option value="departamentos" <?php if($tabla_seleccionada == 'departamentos') echo 'selected'; ?>>Departamentos</option>
                 <option value="proyectos" <?php if($tabla_seleccionada == 'proyectos') echo 'selected'; ?>>Proyectos</option>
                 <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas</option>
-                <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas (General)</option>
                 <option value="nominas.febrero" <?php if($tabla_seleccionada == 'nominas.febrero') echo 'selected'; ?>>Nóminas: Febrero 2024</option>
                 <option value="nominas.extras" <?php if($tabla_seleccionada == 'nominas.extras') echo 'selected'; ?>>Nóminas: Con Horas Extra</option>
                 <option value="nominas.ordenadas" <?php if($tabla_seleccionada == 'nominas.ordenadas') echo 'selected'; ?>>Nóminas: Por Salario Bruto (Desc)</option>
