@@ -86,7 +86,6 @@
             <select name="categoria" class="select-css" onchange="this.form.submit()">
                 <option value="empleados" <?php if($tabla_seleccionada == 'empleados') echo 'selected'; ?>>Empleados</option>
                 <option value="empleados.bcn" <?php if($tabla_seleccionada == 'empleados.bcn') echo 'selected'; ?>>Empleados de Barcelona</option>
-                <option value="empleados.ordenados" <?php if($tabla_seleccionada == 'empleados.ordenados') echo 'selected'; ?>>Empleados (Por Apellido)</option>                <option value="departamentos" <?php if($tabla_seleccionada == 'departamentos') echo 'selected'; ?>>Departamentos</option>
                 <option value="proyectos" <?php if($tabla_seleccionada == 'proyectos') echo 'selected'; ?>>Proyectos</option>
                 <option value="nominas" <?php if($tabla_seleccionada == 'nominas') echo 'selected'; ?>>Nóminas</option>
                 <option value="nominas.total" <?php if($tabla_seleccionada == 'nominas.total') echo 'selected'; ?>>Nóminas: Total Pagado</option>
@@ -105,7 +104,7 @@
         if ($tabla_seleccionada == 'empleados.bcn') {
             $consulta = $conexion->query("SELECT * FROM empleados WHERE lugar_nac = 'Barcelona'"); 
 
-        } else if ($tabla_seleccionada == 'empleados.ordenados') {
+        } else if ($tabla_seleccionada == 'empleados') {
             $consulta = $conexion->query("SELECT * FROM empleados ORDER BY ape1 ASC");
 
         } else if ($tabla_seleccionada == 'nominas.total') {
