@@ -3,90 +3,105 @@
     "nombre": "Corsair 3500X Semi Torre Cristal Templado",
     "precio": "99.90€",
     "estado": "Nuevo",
-    "imagen": "../assets/corsair_3500x.png"
+    "imagen": "../assets/corsair_3500x.png",
+    "caracteristicas": "Proporciones compactas con diseño sobrio y lateral de vidrio templado. Incluye múltiples espacios para optimizar la ventilación interna."
   },
   {
     "nombre": "Corsair 4000D Semi Torre E-ATX Blanca",
     "precio": "97.41€",
     "estado": "Nuevo",
-    "imagen": "../assets/corsair_4000d.png"
+    "imagen": "../assets/corsair_4000d.png",
+    "caracteristicas": "Chasis en color blanco con filtros anti-polvo. Dispone de ventana de cristal y capacidad para 7 ampliaciones horizontales y 3 verticales."
   },
   {
     "nombre": "ASUS A31 PLUS ARGB Mid Tower ATX",
     "precio": "108.95€",
     "estado": "Nuevo",
-    "imagen": "../assets/asus_a31.png"
+    "imagen": "../assets/asus_a31.png",
+    "caracteristicas": "Torre con doble ventana de cristal templado y ventiladores ARGB preinstalados. Cuenta con 7 ranuras de expansión horizontal."
   },
   {
     "nombre": "AMD Ryzen 7 5800X 3.8GHz",
     "precio": "188.95€",
     "estado": "Muy bueno",
-    "imagen": "../assets/ryzen7_5800x.png"
+    "imagen": "../assets/ryzen7_5800x.png",
+    "caracteristicas": "Procesador de 8 núcleos optimizado para gaming. Soporta overclocking sencillo y tecnología de aceleración de almacenamiento."
   },
   {
     "nombre": "Intel Core i7-12700 2.1 GHz",
     "precio": "332.00€",
     "estado": "Muy bueno",
-    "imagen": "../assets/i7_12700.png"
+    "imagen": "../assets/i7_12700.png",
+    "caracteristicas": "Procesador de alta gama con 12 núcleos (8P+4E). Rendimiento equilibrado para productividad profesional y gaming exigente."
   },
   {
     "nombre": "AMD Ryzen 9 9950X3D 4.3/5.7GHz",
     "precio": "332.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/ryzen9_9950x.png"
+    "imagen": "../assets/ryzen9_9950x.png",
+    "caracteristicas": "CPU de ultra alto rendimiento con 16 núcleos y gráficos integrados. Diseñado específicamente para maximizar frames en juegos."
   },
   {
     "nombre": "Corsair CX650 650 W 80 Plus Bronze",
     "precio": "58.98€",
     "estado": "Nuevo",
-    "imagen": "../assets/cx650.png"
+    "imagen": "../assets/cx650.png",
+    "caracteristicas": "Fuente de alimentación de gama media con certificación 80 Plus Bronze. Ofrece un bajo consumo energético y eficiencia estable."
   },
   {
     "nombre": "Corsair RM850e 850W 80 Plus Gold",
     "precio": "119.90€",
     "estado": "Nuevo",
-    "imagen": "../assets/rm850e.png"
+    "imagen": "../assets/rm850e.png",
+    "caracteristicas": "Fuente modular de alto rendimiento y funcionamiento ultra silencioso. Certificación 80 Plus Gold con cableado completo incluido."
   },
   {
     "nombre": "Corsair RM1000x 1000W 80 Plus Gold",
     "precio": "187.61€",
     "estado": "Nuevo",
-    "imagen": "../assets/rm1000x.png"
+    "imagen": "../assets/rm1000x.png",
+    "caracteristicas": "Fuente de alta gama totalmente modular. Compatible con GPUs modernas de alto consumo y certificación de eficiencia Gold."
   },
   {
     "nombre": "Kingston FURY Beast DDR4 16GB (2x8GB)",
     "precio": "169.95€",
     "estado": "Muy bueno",
-    "imagen": "../assets/kingston_fury.png"
+    "imagen": "../assets/kingston_fury.png",
+    "caracteristicas": "Memoria RAM de gama media con función Plug and Play. Diseño optimizado para entornos de trabajo y gaming de entrada."
   },
   {
     "nombre": "Forgeon Cyclone PLUS V2 DDR4 32GB",
     "precio": "259.95€",
     "estado": "Nuevo",
-    "imagen": "../assets/forgeon_cyclone.png"
+    "imagen": "../assets/forgeon_cyclone.png",
+    "caracteristicas": "Memoria gaming construida en aluminio. Incluye disipador de calor integrado para mantener estabilidad en cargas altas."
   },
   {
     "nombre": "Forgeon Nimbus PLUS SSD 2TB NVMe",
     "precio": "259.95€",
     "estado": "Nuevo",
-    "imagen": "../assets/nimbus_2tb.png"
+    "imagen": "../assets/nimbus_2tb.png",
+    "caracteristicas": "Unidad SSD M.2 con velocidades de hasta 7000MB/s. Diseño enfocado al gaming con alta velocidad de carga de datos."
   },
   {
     "nombre": "Samsung 990 PRO 4TB SSD NVMe",
     "precio": "494.99€",
     "estado": "Nuevo",
-    "imagen": "../assets/samsung_990pro.png"
+    "imagen": "../assets/samsung_990pro.png",
+    "caracteristicas": "SSD de alto rendimiento para edición de vídeo 4K y modelado 3D. Destaca por su alta durabilidad y velocidad secuencial de 7450 MB/s."
   },
   {
     "nombre": "Logitech G502 Hero",
     "precio": "81.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/g502_hero.png"
+    "imagen": "../assets/g502_hero.png",
+    "caracteristicas": "Ratón gaming con sensor de 25.600 DPI. Dispone de 11 botones programables, iluminación RGB y pesas ajustables."
   },
   {
     "nombre": "Monitor Krom Kertz 24\" 120Hz",
     "precio": "80.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/krom_kertz.png"
+    "imagen": "../assets/krom_kertz.png",
+    "caracteristicas": "Pantalla IPS de 24 pulgadas con refresco de 120Hz. Resolución FullHD con reproducción de colores vivos y soporte ajustable."
   }
 ]
