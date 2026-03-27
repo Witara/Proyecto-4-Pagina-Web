@@ -154,157 +154,183 @@ function toggleElement(button) {
     "nombre": "Corsair 3500X Semi Torre Cristal Templado",
     "precio": "99.90€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image1.jpeg"
+    "imagen": "../assets/product_images/xl_media_image1.jpeg",
+    "caracteristicas": "Tiene unas proporciones pequeñas y un diseño poco llamativo, además de tener un lado de vidrio. Tiene varios espacios para ventiladores."
   },
   {
     "nombre": "Corsair 4000D Semi Torre E-ATX Blanca",
     "precio": "97.41€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image2.jpeg"
+    "imagen": "../assets/product_images/xl_media_image2.jpeg",
+    "caracteristicas": "Color blanco, con medidas anti polvo. Ventana de cristal y espacio para 7 ampliaciones en horizontal y 3 en vertical."
   },
   {
     "nombre": "ASUS A31 PLUS ARGB Mid Tower ATX",
     "precio": "108.95€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image3.jpeg"
+    "imagen": "../assets/product_images/xl_media_image3.jpeg",
+    "caracteristicas": "Viene con varios ventiladores ya instalados, color negro con dos ventanas de cristal templado, 7 ranuras de expansión horizontal."
   },
   {
     "nombre": "AMD Ryzen 7 5800X 3.8GHz",
     "precio": "188.95€",
     "estado": "Muy bueno",
-    "imagen": "../assets/product_images/xl_media_image4.jpeg"
+    "imagen": "../assets/product_images/xl_media_image4.jpeg",
+    "caracteristicas": "Procesador para gaming con funciones de overclocking sencillas y tecnología AMD que combina la velocidad SSD con la capacidad del disco duro."
   },
   {
     "nombre": "Intel Core i7-12700 2.1 GHz",
     "precio": "332.00€",
     "estado": "Muy bueno",
-    "imagen": "../assets/product_images/xl_media_image5.jpeg"
+    "imagen": "../assets/product_images/xl_media_image5.jpeg",
+    "caracteristicas": "Procesador de super alta gama ambientado tanto al gaming como al trabajo."
   },
   {
     "nombre": "AMD Ryzen 9 9950X3D 4.3/5.7GHz",
     "precio": "332.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image6.jpeg"
+    "imagen": "../assets/product_images/xl_media_image6.jpeg",
+    "caracteristicas": "Procesador de super alta gama ambientado al Gaming con gráfica incorporada."
   },
   {
     "nombre": "Corsair CX650 650 W 80 Plus Bronze",
     "precio": "58.98€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image7.jpeg"
+    "imagen": "../assets/product_images/xl_media_image7.jpeg",
+    "caracteristicas": "Fuente Alimentación gama media de bajo consumo."
   },
   {
     "nombre": "Corsair RM850e 850W 80 Plus Gold",
     "precio": "119.90€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image8.jpeg"
+    "imagen": "../assets/product_images/xl_media_image8.jpeg",
+    "caracteristicas": "Fuente de alimentación de alto rendimiento ultra silenciosa tipo Gold. Viene con todos los cables incluidos."
   },
   {
     "nombre": "Corsair RM1000x 1000W 80 Plus Gold",
     "precio": "187.61€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image9.jpeg"
+    "imagen": "../assets/product_images/xl_media_image9.jpeg",
+    "caracteristicas": "Fuente de alimentación semi silenciosa de alta gama. Compatible con las gráficas más actuales y modernas, totalmente modular."
   },
   {
     "nombre": "Kingston FURY Beast DDR4 16GB (2x8GB)",
     "precio": "169.95€",
     "estado": "Muy bueno",
-    "imagen": "../assets/product_images/xl_media_image10.jpeg"
+    "imagen": "../assets/product_images/xl_media_image10.jpeg",
+    "caracteristicas": "Memoria RAM de gama media con función plug and play. Va bien para gaming de gama baja aunque su diseño se enfoca más para trabajar."
   },
   {
     "nombre": "Forgeon Cyclone PLUS V2 DDR4 32GB",
     "precio": "259.95€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image11.jpeg"
+    "imagen": "../assets/product_images/xl_media_image11.jpeg",
+    "caracteristicas": "Memoria RAM diseñada para el gaming hecha con aluminio y con un disipador de calor incorporado para evitar sobrecalentamiento."
   },
   {
     "nombre": "Corsair Vengeance DDR5 5600MHz 64GB (2x32GB)",
     "precio": "869.95€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image12.jpeg"
+    "imagen": "../assets/product_images/xl_media_image12.jpeg",
+    "caracteristicas": "Memoria RAM de ultra alto rendimiento diseñada para el gaming. Perfil bajo de color gris y disipadores de aluminio."
   },
   {
     "nombre": "Forgeon Nimbus PLUS SSD 2TB NVMe",
     "precio": "259.95€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image13.jpeg"
+    "imagen": "../assets/product_images/xl_media_image13.jpeg",
+    "caracteristicas": "Almacenamiento de 2TB. Su mayor cualidad es la velocidad que alcanza los 7000MB/s. Su diseño está ambientado al gaming."
   },
   {
     "nombre": "Toshiba Canvio Basics 2TB Disco Externo",
     "precio": "79.94€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image14.jpeg"
+    "imagen": "../assets/product_images/xl_media_image14.jpeg",
+    "caracteristicas": "Memoria externa de bajo perfil diseñada para trabajar. Viene con cables incluidos y es perfecta por su bajo precio y su pequeño tamaño."
   },
   {
     "nombre": "Samsung 990 PRO 4TB SSD NVMe",
     "precio": "494.99€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image15.jpeg"
+    "imagen": "../assets/product_images/xl_media_image15.jpeg",
+    "caracteristicas": "Potente SSD Interno PCIe 4.0 NVMe para tareas exigentes como el procesamiento de vídeo en 4K y gráficos en 3D. Su punto fuerte es la durabilidad."
   },
   {
     "nombre": "Tempest Darken 360 Kit Refrigeración Líquida",
     "precio": "46.98€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image16.png"
+    "imagen": "../assets/product_images/xl_media_image16.png",
+    "caracteristicas": "Representa el equilibrio perfecto entre fuerza y precisión, asegurando un rendimiento constante en cualquier situación. Enfocada en gaming."
   },
   {
     "nombre": "Cougar Apolar RGB 12cm Pack 3",
     "precio": "73.99€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image17.jpeg"
+    "imagen": "../assets/product_images/xl_media_image17.jpeg",
+    "caracteristicas": "Optimiza la refrigeración y el aspecto visual de tu setup, diseñado para entornos exigentes y estética gaming profesional."
   },
   {
     "nombre": "Corsair NAUTILUS 240 RS ARGB Kit Refrigeración Líquida",
     "precio": "104.01€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image18.jpeg"
+    "imagen": "../assets/product_images/xl_media_image18.jpeg",
+    "caracteristicas": "Ofrece un enfriamiento eficiente y silencioso con una conectividad sencilla: se conecta directamente a la placa base."
   },
   {
     "nombre": "Owlotech MS900",
     "precio": "30.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image19.png"
+    "imagen": "../assets/product_images/xl_media_image19.png",
+    "caracteristicas": "Diseño ergonómico, sin cable, con buena precisión y DPI controlable. Sus clicks son silenciosos y tiene buena batería."
   },
   {
     "nombre": "Logitech G502 Hero",
     "precio": "81.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image20.png"
+    "imagen": "../assets/product_images/xl_media_image20.png",
+    "caracteristicas": "Diseño gaming, RGB y 11 botones programables. Su cable de 2 metros garantiza más precisión que un ratón bluetooth."
   },
   {
     "nombre": "Logitech M90",
     "precio": "8.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image21.png"
+    "imagen": "../assets/product_images/xl_media_image21.png",
+    "caracteristicas": "Ratón óptimo para oficinas, cómodo y ambidiestro (sirve para mano izquierda y derecha)."
   },
   {
     "nombre": "Logitech K120",
     "precio": "15.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image22.png"
+    "imagen": "../assets/product_images/xl_media_image22.png",
+    "caracteristicas": "Diseño profesional para oficina. Su conexión por cable ayuda a una mayor precisión y velocidad al escribir."
   },
   {
     "nombre": "Forgeon Meteor",
     "precio": "80.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image23.png"
+    "imagen": "../assets/product_images/xl_media_image23.png",
+    "caracteristicas": "Teclado mecánico con diseño profesional, ideal para oficina y gaming. Conexión por cable para máxima velocidad."
   },
   {
     "nombre": "Owlotech EK500",
     "precio": "39.99€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image24.jpeg"
+    "imagen": "../assets/product_images/xl_media_image24.jpeg",
+    "caracteristicas": "Diseño ergonómico con reposabrazos que mejora la postura. Compatible con la mayoría de dispositivos del mercado."
   },
   {
     "nombre": "Monitor Alurin CoreVision 24\"",
     "precio": "80.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image25.jpeg"
+    "imagen": "../assets/product_images/xl_media_image25.jpeg",
+    "caracteristicas": "Pantalla de alta resolución con colores vivos, ajustable y configurable, con un tamaño aceptable."
   },
   {
     "nombre": "Monitor Krom Kertz 24\" 120Hz",
     "precio": "80.00€",
     "estado": "Nuevo",
-    "imagen": "../assets/product_images/xl_media_image25.jpeg"
+    "imagen": "../assets/product_images/xl_media_image25.jpeg",
+    "caracteristicas": "Pantalla de alta resolución IPS de 120Hz con colores vivos, ajustable y configurable."
   }
   ];
 const grid = document.querySelector('.products-grid');
@@ -314,9 +340,10 @@ const statusFilters = document.querySelectorAll('#status-filters input');
 
 // Función para renderizar productos
 // 1. Actualiza la función renderProducts para incluir el onclick
+// Asegúrate de que renderProducts pase el índice correctamente
 function renderProducts(lista) {
     grid.innerHTML = '';
-    lista.forEach((p, index) => { // Añadimos el index para identificar el producto
+    lista.forEach((p, index) => {
         grid.innerHTML += `
             <article class="product-card" onclick="openProductDetail(${index})">
                 <div class="img-container">
@@ -332,37 +359,43 @@ function renderProducts(lista) {
     });
 }
 
-// 2. Nuevas funciones para controlar el Overlay de detalle
-const productOverlay = document.getElementById('product-overlay');
-const closeDetailBtn = document.getElementById('close-detail');
-
+// Función actualizada para mostrar las características técnicas
 function openProductDetail(index) {
+    // Usamos la lista global 'productos' o la filtrada si fuera necesario
     const p = productos[index];
     
-    // Rellenar datos
+    // Inyección de datos en el DOM
     document.getElementById('detail-title').innerText = p.nombre;
     document.getElementById('detail-img').src = p.imagen;
     document.getElementById('detail-status-val').innerText = p.estado;
     document.getElementById('detail-price').innerText = p.precio;
     
-    // Si tienes descripciones en tu array, úsalas, si no, usa la por defecto del HTML
-    if(p.descripcion) {
-        document.getElementById('detail-desc').innerText = p.descripcion;
-    }
+    // Muestra la descripción técnica del JSON
+    const descElement = document.getElementById('detail-desc');
+    descElement.innerText = p.caracteristicas || "Descripción no disponible.";
 
-    // Mostrar overlay
+    // Animación de apertura
+    const productOverlay = document.getElementById('product-overlay');
     productOverlay.classList.remove('hidden');
+    
+    // Pequeño delay para asegurar que la transición CSS se dispare
     setTimeout(() => {
         productOverlay.classList.add('active');
     }, 10);
 }
 
+// Función de cierre (se mantiene igual)
 function closeProductDetail() {
+    const productOverlay = document.getElementById('product-overlay');
     productOverlay.classList.remove('active');
     setTimeout(() => {
         productOverlay.classList.add('hidden');
-    }, 300); // Espera a que termine la animación
+    }, 300);
 }
+
+// 2. Nuevas funciones para controlar el Overlay de detalle
+const productOverlay = document.getElementById('product-overlay');
+const closeDetailBtn = document.getElementById('close-detail');
 
 // Event Listeners para cerrar
 closeDetailBtn.addEventListener('click', closeProductDetail);
